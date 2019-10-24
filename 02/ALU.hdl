@@ -61,13 +61,11 @@ CHIP ALU {
 
    Or8Way(in=out07,out=nnoa07);
    Or8Way(in=out815,out=nnoa815);
-   
+
    Or(a=nnoa07,b=nnoa815,out=nzr);
    Not(in=nzr,out=zr);
-    
-   //Mux(a=true,b=false,sel=out[15],out=ng);
+
+   Mux(a=true,b=false,sel=out[15],out=ng);    
+ 
    
-
-
-
 }
