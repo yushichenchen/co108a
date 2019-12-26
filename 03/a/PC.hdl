@@ -17,13 +17,11 @@ CHIP PC {
 
     PARTS:
     // Put your code here:
-    Mux16(a=false,b=out,sel=inc,out=out1);
-    Add16(a=out,b[0]=true,b[1..15]=false,out=oute1);
-    Not16(in=inc,out=ninc);
-
-    Mux16(a=out1,b=oute1,sel=ninc,out=out2);
-    Mux16(a=out2,b=in,sel=loal,out=out3);
-    Mux16(a=out3,b=false,sel=reset,out=out);
+    Inc16(in=outd,out=out1);
+    Mux16(a=outd,b=out1,sel=inc,out=out2);
+    Mux16(a=out2,b=in,sel=load,out=out3);
+    Mux16(a=out3,b=false,sel=reset,out=out4);
+    Register(in=out4,load=true,out = outd,out =out);
     
     
     

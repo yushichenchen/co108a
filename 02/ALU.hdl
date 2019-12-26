@@ -65,7 +65,7 @@ CHIP ALU {
    Or(a=nnoa07,b=nnoa815,out=nzr);
    Not(in=nzr,out=zr);
 
-   Mux(a=true,b=false,sel=out[15],out=ng);    
+     
  
    
 }

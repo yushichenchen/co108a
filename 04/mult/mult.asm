@@ -7,3 +7,26 @@
 // (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 
 // Put your code here.
+@2
+M=0
+(FUCK)
+@0
+D=M
+@OUT
+D;JLE
+@1
+D=M
+@2
+M=D+M
+@0 
+M=M-1
+D=M
+@FUCK
+D;JGT
+(OUT)
+@OUT
+0;JMP
+
+
+
+
